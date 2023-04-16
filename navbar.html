@@ -1,0 +1,106 @@
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<navbar class="w-full min-h-screen text-gray-900 bg-gradient-to-br from-transparent to-yellow-100">
+    <nav class="flex justify-between items-center py-8 px-6 mx-auto max-w-screen-xl md:px-12 lg:px-16 xl:px-24">
+      <button
+        class="sidebar-open block md:hidden relative z-30 focus:outline-none transform  -translate-x-1/2 -translate-y-1/2 active:scale-75 transition-transform">
+        <svg xmlns="http://www.w3.org/2000/svg" class="btn-open h-5 w-5 transform transition duration-500 ease-in-out"
+          viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            clip-rule="evenodd" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg"
+          class="btn-close hidden h-5 w-5 transform transition duration-500 ease-in-out" viewBox="0 0 20 20"
+          fill="currentColor">
+          <path fill-rule="evenodd"
+            d="M3 7a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 13a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            clip-rule="evenodd" />
+        </svg>
+      </button>
+      <a href="#" class="text-3xl md:text-4xl font-bold tracking-wide">
+        Employ-<span class="text-yellow-500">Me</span>
+      </a>
+      <div
+        class="menu-resposive hidden fixed flex inset-0 transition-all bg-white/70 backdrop-blur-xl z-20 md:static md:bg-transparent md:flex items-center justify-center space-y-8 md:space-y-0 flex-col md:flex-row md:space-x-8 -mt-56 md:mt-0 ">
+        <ul class="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-6 lg:md:-x-8">
+          <li class="text-lg md:text-base lg:text-lg font-medium group text-yellow-500">
+            <a href="#">Find Job
+            </a>
+            <div
+              class="h-0.5 bg-yellow-500 scale-x-0 group-hover:scale-100 transition-transform origin-left rounded-full duration-300 ease-out">
+            </div>
+          </li>
+          <li class="text-lg md:text-base lg:text-lg font-medium group">
+            <a href="#">Company Profile
+            </a>
+            <div
+              class="h-0.5 bg-yellow-500 scale-x-0 group-hover:scale-100 transition-transform origin-left rounded-full duration-300 ease-out">
+            </div>
+          </li>
+          <li class="text-lg md:text-base lg:text-lg font-medium group">
+            <a href="#">Carrier Tips
+            </a>
+            <div
+              class="h-0.5 bg-yellow-500 scale-x-0 group-hover:scale-100 transition-transform origin-left rounded-full duration-300 ease-out">
+            </div>
+          </li>
+          
+          <li class="text-lg md:text-base lg:text-lg font-medium group">
+            <a href="#">For Company
+            </a>
+            <div
+              class="h-0.5 bg-yellow-500 scale-x-0 group-hover:scale-100 transition-transform origin-left rounded-full duration-300 ease-out">
+            </div>
+          </li>
+        </ul>
+      </div>
+      <button class="search-menu flex justify-center items-center h-12 px-5 font-medium text-gray-100 bg-yellow-500 whitespace-nowrap hover:bg-yellow-600 hover:text-white
+      rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-500 focus:outline-none">
+        Login
+      </button>
+    </nav>
+    <div class="search-form hidden flex items-center space-x-4 px-6 mx-auto max-w-screen-xl md:px-12 lg:px-16 xl:px-24 
+    transform duration-500 transition-all">
+      <div class="flex bg-gray-200 p-2 w-full space-x-2 rounded-lg items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 opacity-75 ml-4" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+        <input
+          class="w-full bg-gray-50 outline-none border-transparent focus:border-transparent focus:ring-0 rounded-lg text-sm sm:text-base"
+          type="text" placeholder="Animal name or keyword..." />
+      </div>
+    </div>
+  </navbar>
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+  
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+  
+  <script>
+    const btn = document.querySelector("button.sidebar-open")
+    const menu = document.querySelector(".menu-resposive")
+    const buttonOpen = document.querySelector(".btn-open")
+    const buttonClose = document.querySelector(".btn-close")
+  
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("hidden")
+      formSearch.classList.toggle("hidden", true)
+      buttonOpen.classList.toggle("hidden"),
+        buttonClose.classList.toggle("hidden")
+    })
+  
+    const buttonMenu = document.querySelector("button.search-menu")
+    const formSearch = document.querySelector(".search-form")
+  
+    buttonMenu.addEventListener("click", () => {
+      formSearch.classList.toggle("hidden")
+    })
+  </script>
